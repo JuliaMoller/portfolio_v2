@@ -1,9 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
 body {
     background: #131313;
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
+    overflow-x: hidden;
+}
+
+.bg-dark {
+    background: #131313!important;
 }
 
 .logo {
-    width: 3.5em;
+    width: 3em;
+    pointer-events: none;
 }
