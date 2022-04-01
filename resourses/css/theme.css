@@ -42,13 +42,7 @@ body {
  }
 
  /* 3D object */
- #renderCanvas {
-    width: max-content;
-    touch-action: none;
+#renderCanvas:focus-visible {
+    border: 0;
+    outline: 0;
 }
-
-@media (min-width: 992px) {
-    #renderCanvas {
-        width: 100%;
-    }
- }
