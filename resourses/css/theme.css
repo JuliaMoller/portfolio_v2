@@ -47,7 +47,7 @@ body {
 }
 
 .scrolled {
-    background: #131313!important;
+    background: #131313ec!important;
     transition: background 500ms;
 }
 
