@@ -6,6 +6,9 @@
 
 
 body {
+    width:  100%;
+    height: 100%;
+    margin: 0;
     background: #131313;
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
@@ -34,6 +37,18 @@ body {
 
 @media (min-width: 992px) {
     .carrousel_img {
+        width: 100%;
+    }
+ }
+
+ /* 3D object */
+ #renderCanvas {
+    width: max-content;
+    touch-action: none;
+}
+
+@media (min-width: 992px) {
+    #renderCanvas {
         width: 100%;
     }
  }

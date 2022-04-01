@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:image" content="https://juliamoller.uk/thumbnail.png">
+      
+      <meta property="og:image" content="https://juliamoller.uk/thumbnail.png">
+      <meta property="og:title" content="This is Julia's web portfolio">
+      <meta property="og:description" content="Hi! I'm Julia, a brazilian Art Designer living and creating in UK">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta name="description" content="This is Julia's web portfolio"/>
+      <meta name="author" content="JuliaMoller"/>
+
+      <title>Julia Moller</title>
+
+      <!-- Bootstrap core CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+      <!-- Favicon -->
+      <!-- Font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;600&display=swap" rel="stylesheet">
+
+      <!--- Link to the last version of BabylonJS --->
+      <script src="https://cdn.babylonjs.com/babylon.js"></script>
+      <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+
+      <!-- Custom styles -->
+      <link href="resourses/css/theme.css" rel="stylesheet" type="text/css"/>
+      <style>
+       
+
+        #renderCanvas {
+            width   : 100%;
+            height  : fit-content;
+            touch-action: none;
+        }
+    </style>
+    </head> 
+    <body>
+        <canvas id="renderCanvas"></canvas>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+        <!-- Custom js-->
+        <script>
+            window.addEventListener('DOMContentLoaded', function(){
+                // get the canvas DOM element
+                var canvas = document.getElementById('renderCanvas');
+    
+                // load the 3D engine
+                var engine = new BABYLON.Engine(canvas, true);
+                engine.hideLoadingUI();
+    
+                // createScene function that creates and return the scene
+                var createScene = function(){
+                    // create a basic BJS Scene object
+                    var scene = new BABYLON.Scene(engine);
+                    scene.createDefaultCamera(true, false, false);
+                    scene.clearColor = new BABYLON.Color4(0.0, 0.0, 0.0, 0.0);
+    
+                    BABYLON.SceneLoader.Append("resourses/assets/", "hero3D.glb", scene, function(scene) {
+                        console.log(scene.meshes);
+                        scene.meshes[1].showBoundingBox = false;
+                        var bbox = scene.meshes[1].getBoundingInfo().boundingBox;
+                        var bsphere = scene.meshes[1].getBoundingInfo().boundingSphere;
+                        var center = bbox.centerWorld;
+                        console.log(bsphere);              
+    
+                        // Sets the Camera
+                        scene.createDefaultCameraOrLight(true, true, true);
+                        scene.activeCamera.setTarget(BABYLON.Vector3.Zero());
+                        scene.activeCamera.attachControl(canvas, false);
+                        scene.activeCamera.position = new BABYLON.Vector3(center.x, center.y, bsphere.radiusWorld * 15);
+                        scene.activeCamera.target = center;
+                        scene.activeCamera.alpha = Math.PI / 2;                    
+                    });
+    
+                    return scene;
+                }
+    
+                // call the createScene function
+                var scene = createScene();
+    
+                // run the render loop
+                engine.runRenderLoop(function(){
+                    scene.render();
+                });
+    
+                // the canvas/window resize event handler
+                window.addEventListener('resize', function(){
+                    engine.resize();
+                });
+            });
+        </script>
+    </body>
+</html>
