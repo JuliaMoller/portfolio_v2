@@ -14,10 +14,21 @@ body {
     font-weight: 600;
     overflow-x: hidden;
 }
+/* text colors */
+.text-secondary {
+    color: #A1EEDB!important;
+}
 
+/* background colors */
 .bg-dark {
     background: #131313!important;
 }
+
+.bg-primary {
+    background: #000000!important;
+}
+
+/* svg */
 
 .logo {
     width: 3em;
@@ -50,4 +61,25 @@ body {
 #renderCanvas:focus-visible {
     border: 0;
     outline: 0;
+}
+
+/* left img card */
+
+.left-img-card {
+    flex-direction: row;
+    align-items: center;
+}
+
+.left-img-card img {
+    width: 50%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: calc(0.25rem - 1px);
+}
+
+@media only screen and (max-width: 992px) {
+    .left-img-card .card img {
+    width: 40%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: calc(0.25rem - 1px);
+    }
 }
