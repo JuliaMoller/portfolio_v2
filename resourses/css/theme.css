@@ -89,3 +89,14 @@ body {
     border-bottom-left-radius: calc(0.25rem - 1px);
     }
 }
+
+/* Blog */
+.blog-cards a {
+    background: linear-gradient(to right, #75c3f0 100%, #5c9dff 0%)!important;
+    border: none!important;
+    transition: 0.5s;
+}
+
+.blog-cards a:hover{
+    background: linear-gradient(to right, #75c3f0 0%, #5c9dff 50%, #6840f8 100%)!important;
+}
