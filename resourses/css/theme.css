@@ -91,12 +91,13 @@ body {
 }
 
 /* Blog */
-.blog-cards a {
-    background: linear-gradient(to right, #75c3f0 100%, #5c9dff 0%)!important;
+.btn-primary {
+    background: linear-gradient(to right, #75c3f0 15%, #5c9dff 50%, #6840f8 100%)!important;
     border: none!important;
     transition: 0.5s;
 }
 
-.blog-cards a:hover{
-    background: linear-gradient(to right, #75c3f0 0%, #5c9dff 50%, #6840f8 100%)!important;
+.btn-primary:hover {
+    background: linear-gradient(to right, #6840f8 50%, #17259e 100%)!important;
+    color: #ececec!important;
 }
