@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:image" content="https://juliamoller.uk/thumbnail.png">
+      
+      <meta property="og:image" content="https://juliamoller.uk/thumbnail.png">
+      <meta property="og:title" content="This is Julia's web portfolio">
+      <meta property="og:description" content="Hi! I'm Julia, a brazilian Art Designer living and creating in UK">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta name="description" content="This is Julia's web portfolio"/>
+      <meta name="author" content="JuliaMoller"/>
+
+      <title>Julia Moller</title>
+
+      <!-- Bootstrap core CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+      <!-- Favicon -->
+      <!-- Font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;600&display=swap" rel="stylesheet">
+
+      <!--- Link to the last version of BabylonJS --->
+      <script src="https://cdn.babylonjs.com/babylon.js"></script>
+      <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+
+      <!-- Custom styles -->
+      <link href="resourses/css/theme.css" rel="stylesheet" type="text/css"/>
+    </head> 
+    <body>
+      <!-- navbar --> 
+      <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+          <div class="container d-flex flex-warp justify-content-between align-items-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand d-block d-lg-none" href="index.html">
+              <object class="logo" data="resourses/svg/JuliaLogo-01.svg" type="image/svg+xml"></object>
+            </a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+              <div class="navbar-nav">
+                <a class="navbar-brand mx-3 d-lg-block d-none" href="index.html">
+                  <object class="logo" data="resourses/svg/JuliaLogo-01.svg" type="image/svg+xml"></object>
+                </a>
+                <a class="nav-link text-light mx-5 fs-3" href="slideshow.html"><p>ABOUT</p></a>
+                <a class="nav-link text-light mx-5 fs-3" href="#"><p>BLOG</p></a>
+                <a class="nav-link text-light mx-5 fs-3" href="#"><p>CONTACT</p></a>
+                <a class="nav-link text-light mx-5 fs-3" href="#"><p>GALLERY</P></a>
+              </div>
+          </div>
+        </nav>
+         <!-- Gallery -->
+         <div class="container mt-5 pt-5">
+            <div class="row" data-masonry='{"percentPosition": true }'>
+                <!-- img 1 -->
+                <div class="gallery-img col-4 col-lg-3">
+                  <div class="card border-0 bg-transparent">
+                      <img class="card-img-top rounded-3" src="resourses/img/gallery/Emma.png"/>
+                      <div class="gallery-info"></div>
+                  </div>
+                </div>
+            </div>
+         </div>
+         <div class="container">
+            <!-- About -->
+            <div class="card left-img-card bg-primary my-5 rounded-3">
+              <img src="https://images.unsplash.com/photo-1637666505754-7416ebd70cbf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" class="card-img-top" alt="..."/>
+              <div class="card-body text-secondary">
+              <h1 class="card-title fs-1 fw-bold">ABOUT</h1>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+              </div>
+            </div>
+         </div>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+         <!-- Custom js-->
+         <script src="resourses/js/script.js"></script>
+         <script src="resourses/js/hero3D.js"></script>
+         <script>
+           const gallery = document.getElementsByClassName("gallery-img")[0];
+           var info = document.getElementsByClassName("gallery-info")[0];
+
+           // this will be executed only once when the cursor moves over the card
+           gallery.addEventListener('mouseenter', function(event){
+             console.log ("mose in");
+             info.classList.add("card-body");
+             info.innerHTML = "<p class='text-light'>hi</p>"
+            }, false);
+
+          // this will be executed only once when the cursor moves over the card
+          gallery.addEventListener('mouseleave', function(event){
+           console.log ("mouse leave");
+          }, false);
+
+         </script>
+    </body>
+</html>
