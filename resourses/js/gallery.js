@@ -21,7 +21,7 @@ const cardInfo = [
 for(var i = 0; i < gallery.length; i++){
     const index = i;
 
-    const cardHtml = "<h5 class='card-title fw-bolder'>" + cardInfo[index].title + "</h5><p class='card-text fw-normal'>" + cardInfo[index].desc + "</p><a href='" + cardInfo[index].link + "' class='btn btn-link fw-bold'>...read more</a>";
+    const cardHtml = "<h5 class='card-title fw-bolder'>" + cardInfo[index].title + "</h5><p class='card-text fw-normal'>" + cardInfo[index].desc + "</p><a href='" + cardInfo[index].link + "' class='btn btn-link fw-bold' target='blank'>...read more</a>";
 
     // this will be executed only once when the cursor moves over the card
     gallery[i].addEventListener('mouseenter', function(event) {
