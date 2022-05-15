@@ -57,15 +57,23 @@
          <!-- <canvas id="renderCanvas"></canvas> -->
          <!-- Gallery -->
          <div class="container mt-5 pt-5">
-            <div class="row" data-masonry='{"percentPosition": true }'>
-                <!-- img 1 -->
-                <div class="col-4 col-lg-3">
-                  <div class="card border-0 bg-transparent">
-                      <img class="card-img-top rounded-3" src="resourses/img/gallery/Emma.png"/>
-                  </div>
+          <div class="row" data-masonry='{"percentPosition": relative }'>
+              <!-- img 1 -->
+              <div class="col-4 col-lg-3">
+                <div class="gallery-img card border-0">
+                    <img class="card-img-top rounded-3" src="resourses/img/gallery/Emma.png"/>
+                    <div class="gallery-info"></div>
                 </div>
-            </div>
-         </div>
+              </div>
+              <!-- img 2 -->
+              <div class="col-4 col-lg-3">
+                <div class="gallery-img card border-0">
+                    <img class="card-img-top rounded-3" src="resourses/img/gallery/Emma.png"/>
+                    <div class="gallery-info"></div>
+                </div>
+              </div>
+          </div>
+       </div>
          <div class="container">
             <!-- About -->
             <div class="card left-img-card bg-primary my-5 rounded-3">
@@ -112,7 +120,7 @@
         </div> -->
         <!-- Blog -->
         <div class="container my-5 mx-auto row blog-cards">
-
+          <!-- card 1 -->
           <div class="col-md-4 p-2">
             <div class="card bg-primary border-0">
               <img src="https://images.unsplash.com/photo-1510906594845-bc082582c8cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=844&q=80" class="card-img-top" alt="...">
@@ -125,7 +133,7 @@
               </div>
             </div>
           </div>
-
+          <!-- card 2 -->
           <div class="col-md-4 p-2">
             <div class="card bg-primary border-0">
               <img src="https://images.unsplash.com/photo-1510906594845-bc082582c8cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=844&q=80" class="card-img-top" alt="...">
@@ -138,7 +146,7 @@
               </div>
             </div>
           </div>
-
+          <!-- card 3 -->
           <div class="col-md-4 p-2">
             <div class="card bg-primary border-0">
               <img src="https://images.unsplash.com/photo-1510906594845-bc082582c8cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=844&q=80" class="card-img-top" alt="...">
@@ -207,5 +215,6 @@
          <!-- Custom js-->
          <script src="resourses/js/script.js"></script>
          <script src="resourses/js/hero3D.js"></script>
+         <script src="resourses/js/gallery.js"></script>
     </body>
 </html>
