@@ -109,7 +109,7 @@ body {
 }
 
 /* Gallery Images */
-.gallery-img .card-body {
+/* .gallery-img .card-body {
     transform: translateY(-100%);
     z-index: -1;
     transition: 0.5s linear;
@@ -117,4 +117,4 @@ body {
 
 .gallery-img:hover .card-body {
     transform: translateY(0%);
-}
+} */
