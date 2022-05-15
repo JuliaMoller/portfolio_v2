@@ -108,4 +108,15 @@ body {
     }
 }
 
+/* Gallery Images */
+.gallery-img img {
+    z-index: 2;
+}
+.gallery-info {
+    transform: translateY(-100%);
+    transition: 0.4s linear;
+}
 
+.gallery-img:hover .gallery-info {
+    transform: translateY(0%);
+}
