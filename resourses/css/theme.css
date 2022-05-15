@@ -13,6 +13,12 @@ body {
     font-weight: 600;
     overflow-x: hidden;
 }
+
+/* text weight */
+fw-normal {
+    font-weight: 300!important;
+}
+
 /* text colors */
 
 .text-primary {
@@ -43,6 +49,10 @@ body {
 .btn-primary:hover {
     background: linear-gradient(to right, #6840f8 50%, #17259e 100%)!important;
     color: #ececec!important;
+}
+
+.btn-secondary {
+    background: #58A3DB!important;
 }
 
 /* svg */
